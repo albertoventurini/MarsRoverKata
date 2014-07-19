@@ -51,7 +51,8 @@ namespace MarsRoverKata.Test
 		}
 
 
-		/*[Test]
+		/*
+		[Test]
 		public void ReceiveCommands_r_should_decrease_angle_by_90()
 		{
 			IRover rover = BuildRover('N');

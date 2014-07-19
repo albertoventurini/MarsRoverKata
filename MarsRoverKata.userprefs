@@ -1,18 +1,20 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="MarsRoverKata.Test/RoverTest.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="MarsRoverKata/Rover.cs">
     <Files>
-      <File FileName="MarsRoverKata.Test/RoverTest.cs" Line="23" Column="22" />
-      <File FileName="MarsRoverKata/Rover.cs" Line="18" Column="19" />
+      <File FileName="MarsRoverKata.Test/RoverTest.cs" Line="54" Column="5" />
+      <File FileName="MarsRoverKata/Rover.cs" Line="53" Column="28" />
       <File FileName="MarsRoverKata/IRover.cs" Line="7" Column="32" />
-      <File FileName="MarsRoverKata/Coordinates.cs" Line="13" Column="10" />
+      <File FileName="MarsRoverKata.Test/Helpers/CoordinateMoverTest.cs" Line="78" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
-        <State expanded="True">
-          <Node name="MarsRoverKata" expanded="True" />
+        <State expanded="True" selected="True">
+          <Node name="MarsRoverKata" expanded="True">
+            <Node name="Helpers" expanded="True" />
+          </Node>
           <Node name="MarsRoverKata.Test" expanded="True">
-            <Node name="RoverTest.cs" selected="True" />
+            <Node name="Helpers" expanded="True" />
           </Node>
         </State>
       </Pad>

@@ -46,16 +46,20 @@ namespace MarsRoverKata
 
 		public void TurnRight(Coordinates coordinates)
 		{
-			int angle = _angleMapper.CharToInt(coordinates.Direction);
-			angle -= 90;
-			coordinates.Direction = _angleMapper.IntToChar(angle);
+			Turn(coordinates, -90);
 		}
 
 
 		public void TurnLeft(Coordinates coordinates)
 		{
+			Turn(coordinates, 90);
+		}
+
+
+		private void Turn(Coordinates coordinates, int increment)
+		{
 			int angle = _angleMapper.CharToInt(coordinates.Direction);
-			angle += 90;
+			angle += increment;
 			coordinates.Direction = _angleMapper.IntToChar(angle);
 		}
 	}
