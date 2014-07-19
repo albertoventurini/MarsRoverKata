@@ -1,0 +1,31 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="MarsRoverKata.Test/RoverTest.cs">
+    <Files>
+      <File FileName="MarsRoverKata.Test/RoverTest.cs" Line="23" Column="22" />
+      <File FileName="MarsRoverKata/Rover.cs" Line="18" Column="19" />
+      <File FileName="MarsRoverKata/IRover.cs" Line="7" Column="32" />
+      <File FileName="MarsRoverKata/Coordinates.cs" Line="13" Column="10" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="MarsRoverKata" expanded="True" />
+          <Node name="MarsRoverKata.Test" expanded="True">
+            <Node name="RoverTest.cs" selected="True" />
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="ClassPad">
+        <State expanded="True" selected="True" />
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
