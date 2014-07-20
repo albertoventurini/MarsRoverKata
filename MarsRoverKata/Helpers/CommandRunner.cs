@@ -26,6 +26,7 @@ namespace MarsRoverKata
 			_actions[command] = action;
 		}
 
+
 		public void Run(string commands)
 		{
 			foreach(char command in commands)

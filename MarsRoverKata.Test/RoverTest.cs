@@ -1,76 +1,76 @@
 using System;
 using NUnit.Framework;
+using Moq;
 
 namespace MarsRoverKata.Test
 {
 	[TestFixture]
 	public class RoverTest
 	{
-		[TestCase('N', 0, 1)]
-		[TestCase('S', 0, -1)]
-		[TestCase('E', 1, 0)]
-		[TestCase('W', -1, 0)]
-		public void ReceiveCommands_f_advance_by_1(char direction, int finalX, int finalY)
+		private IRover _rover;
+		private Mock<ICoordinateMover> _mover;
+		//private Mock<ICommandRunner> _commandRunner;
+		private ICommandRunner _commandRunner;
+
+
+		[SetUp]
+		public void Setup()
 		{
-			IRover rover = BuildRover(direction);
+			_mover = new Mock<ICoordinateMover>();
+			//_commandRunner = new Mock<ICommandRunner>();
+			_commandRunner = new CommandRunner();
 
-			rover.ReceiveCommands ("f");
-
-			Assert.AreEqual (finalX, rover.Position.X);
-			Assert.AreEqual (finalY, rover.Position.Y);
+			_rover = new Rover(_mover.Object, _commandRunner);
 		}
 
 
-		// ReceiveCommands_f_should_use_method_Forward_of_CoordinateMover()
-
-
-		[TestCase('N', 0, 2)]
-		[TestCase('S', 0, -2)]
-		[TestCase('E', 2, 0)]
-		[TestCase('W', -2, 0)]
-		public void ReceiveCommands_ff_advance_by_2(char direction, int finalX, int finalY)
-		{
-			IRover rover = BuildRover(direction);
-
-			rover.ReceiveCommands ("ff");
-
-			Assert.AreEqual (finalX, rover.Position.X);
-			Assert.AreEqual (finalY, rover.Position.Y);
-		}
-
-
-		[TestCase('N', 0, -1)]
-		[TestCase('S', 0, 1)]
-		[TestCase('E', -1, 0)]
-		[TestCase('W', 1, 0)]
-		public void ReceiveCommands_b_recede_by_1(char direction, int finalX, int finalY)
-		{
-			IRover rover = BuildRover(direction);
-
-			rover.ReceiveCommands ("b");
-
-			Assert.AreEqual (finalX, rover.Position.X);
-			Assert.AreEqual (finalY, rover.Position.Y);
-		}
-
-
-		/*
 		[Test]
-		public void ReceiveCommands_r_should_decrease_angle_by_90()
+		public void ReceiveCommands_f_should_use_CoordinateMover_Forward()
 		{
-			IRover rover = BuildRover('N');
-			double initialAngle = rover.Angle;
+			_rover.ReceiveCommands("f");
 
-			rover.ReceiveCommands ("r");
-
-			Assert.AreEqual (initialAngle - 90, rover.Angle);
-		}*/
-
-
-		private IRover BuildRover(char direction)
-		{
-			return new Rover(0, 0, direction);
+			_mover.Verify(x => x.Forward(It.IsAny<Coordinates>()));
 		}
+
+
+		[Test]
+		public void ReceiveCommands_b_should_use_CoordinateMover_Backward()
+		{
+			_rover.ReceiveCommands("b");
+
+			_mover.Verify(x => x.Backward(It.IsAny<Coordinates>()));
+		}
+
+
+		[Test]
+		public void ReceiveCommands_r_should_use_CoordinateMover_TurnRight()
+		{
+			_rover.ReceiveCommands("r");
+
+			_mover.Verify(x => x.TurnRight(It.IsAny<Coordinates>()));
+		}
+
+		[Test]
+		public void ReceiveCommands_l_should_use_CoordinateMover_TurnRight()
+		{
+			_rover.ReceiveCommands("l");
+
+			_mover.Verify(x => x.TurnLeft(It.IsAny<Coordinates>()));
+		}
+
+
+		[Test]
+		public void ReceiveCommands_should_use_CommandRunner_Run()
+		{
+			Mock<ICoordinateMover> mover = new Mock<ICoordinateMover>();
+			Mock<ICommandRunner> runner = new Mock<ICommandRunner>();
+			IRover rover = new Rover(mover.Object, runner.Object);
+
+			rover.ReceiveCommands("flrb");
+
+			runner.Verify(x => x.Run(It.IsAny<string>()));
+		}
+
 
 
 	}
