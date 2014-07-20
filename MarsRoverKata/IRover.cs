@@ -4,7 +4,8 @@ namespace MarsRoverKata
 {
 	public interface IRover
 	{
-		Coordinates Position { get; set; }
+		Coordinates Position { get; }
+		void Initialize(Coordinates initialPosition);
 		void ReceiveCommands(string commands);
 	}
 }

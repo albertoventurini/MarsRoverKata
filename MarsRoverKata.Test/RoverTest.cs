@@ -72,6 +72,17 @@ namespace MarsRoverKata.Test
 		}
 
 
+		[Test]
+		public void Initialize_should_set_position()
+		{
+			_rover.Initialize(new Coordinates(1, 1, 'S'));
+
+			Assert.AreEqual(1, _rover.Position.X);
+			Assert.AreEqual(1, _rover.Position.Y);
+			Assert.AreEqual('S', _rover.Position.Direction);
+		}
+
+
 
 	}
 }

@@ -16,7 +16,7 @@ namespace MarsRoverKata
 
 			IRover rover = new Rover(mover, runner);
 
-			rover.Position = new Coordinates(0, 0, 'N');
+			rover.Initialize(new Coordinates(0, 0, 'N'));
 
 			rover.ReceiveCommands("f");
 		}

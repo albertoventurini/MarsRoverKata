@@ -4,7 +4,7 @@ namespace MarsRoverKata
 {
 	public class Rover : IRover
 	{
-		public Coordinates Position { get; set; }
+		public Coordinates Position { get; private set; }
 
 		private readonly ICoordinateMover _mover;
 		private readonly ICommandRunner _commandRunner;
@@ -25,6 +25,12 @@ namespace MarsRoverKata
 			_commandRunner.Add('b', MoveBackward);
 			_commandRunner.Add('r', TurnRight);
 			_commandRunner.Add('l', TurnLeft);
+		}
+
+
+		public void Initialize(Coordinates initialPosition)
+		{
+			Position = initialPosition;
 		}
 
 
