@@ -1,30 +1,14 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="MarsRoverKata/Rover.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="MarsRoverKata/Helpers/CommandRunner.cs">
     <Files>
-      <File FileName="MarsRoverKata.Test/RoverTest.cs" Line="54" Column="5" />
-      <File FileName="MarsRoverKata/Rover.cs" Line="53" Column="28" />
+      <File FileName="MarsRoverKata.Test/RoverTest.cs" Line="8" Column="3" />
+      <File FileName="MarsRoverKata/Rover.cs" Line="12" Column="62" />
       <File FileName="MarsRoverKata/IRover.cs" Line="7" Column="32" />
-      <File FileName="MarsRoverKata.Test/Helpers/CoordinateMoverTest.cs" Line="78" Column="1" />
+      <File FileName="MarsRoverKata.Test/Helpers/CoordinateMoverTest.cs" Line="1" Column="1" />
+      <File FileName="MarsRoverKata/Helpers/CoordinateMover.cs" Line="1" Column="1" />
+      <File FileName="MarsRoverKata/Helpers/CommandRunner.cs" Line="4" Column="2" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State expanded="True" selected="True">
-          <Node name="MarsRoverKata" expanded="True">
-            <Node name="Helpers" expanded="True" />
-          </Node>
-          <Node name="MarsRoverKata.Test" expanded="True">
-            <Node name="Helpers" expanded="True" />
-          </Node>
-        </State>
-      </Pad>
-      <Pad Id="ClassPad">
-        <State expanded="True" selected="True" />
-      </Pad>
-      <Pad Id="MonoDevelop.Debugger.WatchPad">
-        <State />
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />

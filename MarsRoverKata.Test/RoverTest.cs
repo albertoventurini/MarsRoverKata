@@ -21,6 +21,9 @@ namespace MarsRoverKata.Test
 		}
 
 
+		// ReceiveCommands_f_should_use_method_Forward_of_CoordinateMover()
+
+
 		[TestCase('N', 0, 2)]
 		[TestCase('S', 0, -2)]
 		[TestCase('E', 2, 0)]

@@ -9,6 +9,8 @@ namespace MarsRoverKata
 		private ICoordinateMover _mover;
 
 
+		// public Rover(ICoordinateMover mover) { _mover = mover; }
+
 		public Rover(Coordinates initPosition)
 		{
 			Position = initPosition;
