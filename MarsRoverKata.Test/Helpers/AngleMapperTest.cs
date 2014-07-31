@@ -53,10 +53,9 @@ namespace MarsRoverKata.Test
 
 
 		[Test]
-		[ExpectedException(typeof(Exception))]
 		public void CharToInt_unknown_direction_throws_exception()
 		{
-			_mapper.CharToInt('Y');
+			Assert.Throws<Exception>(() => _mapper.CharToInt('Y'));
 		}
 
 

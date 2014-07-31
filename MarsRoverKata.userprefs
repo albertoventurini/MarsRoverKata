@@ -1,13 +1,28 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="MarsRoverKata.Test/Acceptance/AcceptanceTest.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="MarsRoverKata/Rover.cs">
     <Files>
-      <File FileName="MarsRoverKata.Test/RoverTest.cs" Line="67" Column="58" />
-      <File FileName="MarsRoverKata/Rover.cs" Line="30" Column="3" />
-      <File FileName="MarsRoverKata/IRover.cs" Line="7" Column="36" />
-      <File FileName="MarsRoverKata/Program.cs" Line="17" Column="44" />
-      <File FileName="MarsRoverKata.Test/Acceptance/AcceptanceTest.cs" Line="20" Column="41" />
+      <File FileName="MarsRoverKata.Test/RoverTest.cs" Line="1" Column="1" />
+      <File FileName="MarsRoverKata/Rover.cs" Line="7" Column="10" />
+      <File FileName="MarsRoverKata/IRover.cs" Line="1" Column="1" />
+      <File FileName="MarsRoverKata/Program.cs" Line="1" Column="1" />
+      <File FileName="MarsRoverKata.Test/Acceptance/AcceptanceTest.cs" Line="1" Column="1" />
+      <File FileName="MarsRoverKata/Helpers/CoordinateMover.cs" Line="1" Column="1" />
+      <File FileName="MarsRoverKata/Helpers/AngleMapper.cs" Line="1" Column="1" />
+      <File FileName="MarsRoverKata.Test/Helpers/AngleMapperTest.cs" Line="1" Column="1" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="MarsRoverKata" expanded="True">
+            <Node name="Rover.cs" selected="True" />
+          </Node>
+          <Node name="MarsRoverKata.Test" expanded="True">
+            <Node name="References" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />

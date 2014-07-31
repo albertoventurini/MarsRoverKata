@@ -48,12 +48,11 @@ namespace MarsRoverKata.Test
 
 
 		[Test]
-		[ExpectedException(typeof(Exception))]
 		public void Get_with_no_item_throws_exception()
 		{
 			_biDictionary.Add('N', 90);
 
-			_biDictionary.Get(0);
+			Assert.Throws<Exception>(() => _biDictionary.Get(0));
 		}
 
 	}

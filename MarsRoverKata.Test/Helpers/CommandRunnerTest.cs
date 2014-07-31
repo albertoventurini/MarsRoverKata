@@ -41,10 +41,9 @@ namespace MarsRoverKata.Test
 
 
 		[Test]
-		[ExpectedException(typeof(Exception))]
 		public void Run_with_unknown_command_should_throw_exception()
 		{
-			_commandRunner.Run("ffg");
+			Assert.Throws<Exception>(() => _commandRunner.Run("ffg"));
 		}
 
 
